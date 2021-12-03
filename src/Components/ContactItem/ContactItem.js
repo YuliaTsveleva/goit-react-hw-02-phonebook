@@ -5,8 +5,8 @@ import s from './ContactItem.module.css';
 function ContactItem({ name, number }) {
   return (
     <>
-      <p className={s.ContactItem}>{name}</p>
-      <p className={s.ContactItem}>{number}</p>
+      <p className={s.Name}>{name}</p>
+      <p className={s.Number}>{number}</p>
     </>
   );
 }
