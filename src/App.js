@@ -18,27 +18,29 @@ class App extends Component {
   };
 
   addContact = ({ name, number }) => {
-    const contact = {
-      id: nanoid(),
-      name,
-      number,
-    };
-
     const alreadyExist = this.state.contacts.find(
       contact => contact.name === name,
     );
 
-    if (!alreadyExist) {
+    if (!alreadyExist && name !== '' && number !== '') {
       this.setState(({ contacts }) => ({
-        contacts: [contact, ...contacts],
+        contacts: [{ id: nanoid(), name, number }, ...contacts],
       }));
-    } else alert(`${name}is already in contacts`);
+    } else if (name === '' || number === '') {
+      alert('Fill in all the fields please!');
+    } else if (alreadyExist) {
+      alert(`${name} is already in contacts`);
+    }
   };
 
   changeFilter = e => {
     this.setState({
       filter: e.currentTarget.value,
     });
+  };
+
+  removeContact = e => {
+    console.log(e.target);
   };
 
   render() {
@@ -52,8 +54,11 @@ class App extends Component {
           <AddContactForm onSubmit={this.addContact} />
         </Section>
         <Section title="Contacts">
-          <Filter value={this.state.filter} onChange={this.changeFilter} />
-          <ContactList contacts={filteredContacts}></ContactList>
+          <Filter value={this.state.filter} onSubmit={this.changeFilter} />
+          <ContactList
+            contacts={filteredContacts}
+            onChange={this.removeContact}
+          ></ContactList>
         </Section>
       </div>
     );
