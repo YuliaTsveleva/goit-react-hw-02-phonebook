@@ -1,6 +1,7 @@
 .Form {
   display: flex;
   flex-direction: column;
+align-items: center;
 }
 
 .Label {
@@ -24,6 +25,7 @@
 
 .Button {
   margin: 20px;
+  padding: 0 15px;
   background-color: rgb(144, 238, 210);
   border:2px solid transparent;
   border-radius: 4px;

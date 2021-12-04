@@ -5,8 +5,10 @@ import s from './ContactItem.module.css';
 function ContactItem({ id, name, number, onClick }) {
   return (
     <li key={id} className={s.Item}>
-      <p className={s.Name}>{name}</p>
-      <p className={s.Number}>{number}</p>
+      <div className={s.Wrapper}>
+        <p className={s.Name}>{name}:</p>
+        <p className={s.Number}>{number}</p>
+      </div>
       <button type="button" onClick={() => onClick()} className={s.Button}>
         Remove
       </button>
