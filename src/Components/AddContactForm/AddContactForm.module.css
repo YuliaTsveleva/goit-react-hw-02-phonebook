@@ -36,7 +36,6 @@
   cursor: pointer;
 }
 
-.Button:hover,
-.Button:focus {
+.Button:hover {
   background-color: rgb(0, 0, 248);
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Section from './Components/Section/Section';
-import AddContactForm from './Components/AddContactForm/AddContactForm';
-import ContactList from './Components/ContactList/ContactList';
-import Filter from './Components/Filter/Filter';
-import EmptyText from './Components/EmptyText/EmptyText';
+import Section from './Components/Section';
+import AddContactForm from './Components/AddContactForm';
+import ContactList from './Components/ContactList';
+import Filter from './Components/Filter';
+import EmptyText from './Components/EmptyText';
 import { nanoid } from 'nanoid';
 class App extends Component {
   state = {
