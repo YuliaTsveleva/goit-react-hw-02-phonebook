@@ -10,7 +10,7 @@ function ContactItem({ id, name, number, onClick }) {
         <p className={s.Number}>{number}</p>
       </div>
       <button type="button" onClick={() => onClick()} className={s.Button}>
-        Remove
+        Delete
       </button>
     </li>
   );

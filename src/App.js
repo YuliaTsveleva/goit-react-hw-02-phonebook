@@ -4,6 +4,7 @@ import Section from './Components/Section/Section';
 import AddContactForm from './Components/AddContactForm/AddContactForm';
 import ContactList from './Components/ContactList/ContactList';
 import Filter from './Components/Filter/Filter';
+import EmptyText from './Components/EmptyText/EmptyText';
 import { nanoid } from 'nanoid';
 class App extends Component {
   state = {
@@ -71,6 +72,7 @@ class App extends Component {
             contacts={filteredContacts}
             onClick={this.removeContact}
           ></ContactList>
+          {contacts.length === 0 && <EmptyText />}
         </Section>
       </div>
     );
