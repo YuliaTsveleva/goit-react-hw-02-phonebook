@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
-const Filter = ({ value, onChange }) => {
+const Filter = ({ value, onChange, total }) => {
   return (
     <label className={s.Label}>
-      Find contact by name
+      Find contact by name in {total} contacts
       <input
         className={s.Input}
         type="text"
