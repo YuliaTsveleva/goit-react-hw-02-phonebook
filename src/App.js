@@ -26,10 +26,10 @@ class App extends Component {
       this.setState(({ contacts }) => ({
         contacts: [{ id: nanoid(), name, number }, ...contacts],
       }));
-    } else if (name === '' || number === '') {
-      alert('Fill in all the fields please!');
     } else if (alreadyExist) {
       alert(`${name} is already in contacts`);
+    } else if (name === '' || number === '') {
+      alert('Fill in all the fields please!');
     }
   };
 
