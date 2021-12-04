@@ -60,7 +60,9 @@ class App extends Component {
           <AddContactForm onSubmit={this.addContact} />
         </Section>
         <Section title="Contacts">
-          <Filter value={this.state.filter} onChange={this.changeFilter} />
+          {this.state.contacts.length > 1 && (
+            <Filter value={this.state.filter} onChange={this.changeFilter} />
+          )}
           <ContactList
             contacts={filteredContacts}
             onClick={this.removeContact}
