@@ -1,9 +1,30 @@
-.Name {
-  padding: 10px;
+.Item {
+  display: flex;
+  align-items: center;
+  color:rgb(28, 28, 128);
+  font-weight: 500;
+  line-height: 0.5;
 
+} 
+.Name {
+  padding: 10px 0;
+  width: 150px;
 }
 
 .Number {
-  padding: 10px;
+  padding: 10px 0;
+  width: 150px;
+}
 
+.Button {
+  padding: 0 10px;
+  height: 20px;
+  background-color: rgb(243, 176, 176);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Button:hover, .Button:focus{
+  background-color:  lightcoral;
 }

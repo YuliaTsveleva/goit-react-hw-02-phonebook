@@ -1,10 +1,9 @@
-.contactsList{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-
+.contactsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
 }
 
-.Item{display: flex;}
+

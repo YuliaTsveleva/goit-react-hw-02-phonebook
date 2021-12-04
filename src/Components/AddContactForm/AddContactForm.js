@@ -28,21 +28,23 @@ class AddContactForm extends Component {
       <form className={s.Form}>
         {CONFIG.map(field => (
           <div key={field.name}>
-            <label>{field.label}</label>
-            <input
-              id={nanoid()}
-              value={this.state[field.name]}
-              onChange={this.handleChange}
-              className={s.Input}
-              type={field.type}
-              name={field.name}
-              pattern={field.pattern}
-              title={field.title}
-              required
-            />
+            <label className={s.Label}>
+              {field.label}
+              <input
+                id={nanoid()}
+                value={this.state[field.name]}
+                onChange={this.handleChange}
+                className={s.Input}
+                type={field.type}
+                name={field.name}
+                pattern={field.pattern}
+                title={field.title}
+                required
+              />
+            </label>
           </div>
         ))}
-        <button type="submit" onClick={this.handleSubmit}>
+        <button className={s.Button} type="submit" onClick={this.handleSubmit}>
           Add contact
         </button>
       </form>

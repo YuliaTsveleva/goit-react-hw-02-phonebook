@@ -1,0 +1,17 @@
+.Section{
+  
+    padding: 20px 30px;
+}
+
+.Section:first-child{
+    margin-right: 50px;
+}
+
+.Section:nth-child(2){
+    width: 100vw;
+}
+
+.Title{
+    color:rgb(28, 28, 128);
+    padding: 10px;
+}
