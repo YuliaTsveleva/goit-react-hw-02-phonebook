@@ -19,15 +19,14 @@ class App extends Component {
 
   addContact = ({ name, number }) => {
     const alreadyExist = this.state.contacts.find(
-      contact => contact.name === name,
+      contact => contact.name.toLowerCase() === name.toLowerCase(),
     );
-
     if (!alreadyExist && name !== '' && number !== '') {
       this.setState(({ contacts }) => ({
         contacts: [{ id: nanoid(), name, number }, ...contacts],
       }));
     } else if (alreadyExist) {
-      alert(`${name} is already in contacts`);
+      alert(`${name} is already exists in contacts`);
     } else if (name === '' || number === '') {
       alert('Fill in all the fields please!');
     }
@@ -40,8 +39,9 @@ class App extends Component {
   };
 
   getFilteredContacts = () => {
-    return this.state.contacts.filter(contact =>
-      contact.name.toLowerCase().includes(this.state.filter.toLowerCase()),
+    const { contacts, filter } = this.state;
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(filter.toLowerCase()),
     );
   };
 
@@ -52,16 +52,16 @@ class App extends Component {
   };
 
   render() {
+    const { contacts, filter } = this.state;
     const filteredContacts = this.getFilteredContacts();
-
     return (
       <div className="App">
         <Section title="Phonebook">
           <AddContactForm onSubmit={this.addContact} />
         </Section>
         <Section title="Contacts">
-          {this.state.contacts.length > 1 && (
-            <Filter value={this.state.filter} onChange={this.changeFilter} />
+          {contacts.length > 1 && (
+            <Filter value={filter} onChange={this.changeFilter} />
           )}
           <ContactList
             contacts={filteredContacts}

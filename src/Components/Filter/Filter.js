@@ -20,4 +20,5 @@ export default Filter;
 
 Filter.propTypes = {
   contacts: PropTypes.string,
+  onChange: PropTypes.func,
 };

@@ -19,6 +19,8 @@ function ContactItem({ id, name, number, onClick }) {
 export default ContactItem;
 
 ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };

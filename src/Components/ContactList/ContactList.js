@@ -23,4 +23,5 @@ export default ContactList;
 
 ContactList.propTypes = {
   contacts: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
