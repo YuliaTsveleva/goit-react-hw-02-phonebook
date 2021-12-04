@@ -5,6 +5,7 @@ align-items: center;
 }
 
 .Label {
+  font-size: 14px;
   color: rgb(28, 28, 128);
   font-style: italic;
 }

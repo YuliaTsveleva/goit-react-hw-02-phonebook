@@ -1,25 +1,27 @@
 .Item {
   display: flex;
-  justify-content:space-between;
-    align-items: center;
-    width: 100%;
-  color:rgb(28, 28, 128);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: rgb(28, 28, 128);
   font-weight: 500;
   line-height: 0.5;
-} 
+}
 
-.Wrapper{
+.Wrapper {
   display: flex;
- }
+  align-items: center;
+}
 
 .Name {
   padding: 10px 0;
   margin-right: 10px;
+  line-height: 1;
 }
 
 .Number {
   padding: 10px 0;
-margin-right: 10px;
+  margin-right: 10px;
 }
 
 .Button {
@@ -31,6 +33,7 @@ margin-right: 10px;
   cursor: pointer;
 }
 
-.Button:hover, .Button:focus{
-  background-color:  lightcoral;
+.Button:hover,
+.Button:focus {
+  background-color: lightcoral;
 }
