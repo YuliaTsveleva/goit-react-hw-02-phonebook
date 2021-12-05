@@ -25,7 +25,7 @@ class AddContactForm extends Component {
 
   render() {
     return (
-      <form className={s.Form}>
+      <form className={s.Form} autoComplete="off" onSubmit={this.handleSubmit}>
         {CONFIG.map(field => (
           <div key={field.name}>
             <label className={s.Label}>
@@ -44,7 +44,7 @@ class AddContactForm extends Component {
             </label>
           </div>
         ))}
-        <button className={s.Button} type="submit" onClick={this.handleSubmit}>
+        <button className={s.Button} type="submit">
           Add contact
         </button>
       </form>
